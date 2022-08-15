@@ -6,14 +6,12 @@
 int main()
 {
     printf("Enter Three DIgit: ");
-    int a, b, c;
-    scanf("%d%d%d", &a, &b, &c);
-    printf("a=%d, b=%d, c=%d\n", a, b, c);
+    int a;
+    scanf("%d", &a);
+    printf("a=%d\n");
 
-    a++;
-    b++;
-    c++;
-    printf("a=%d, b=%d, c=%d", a, b, c);
+    int x = a%10*100 + a/10;
+    printf("a=%d", x);
     
     return 0;
 }
