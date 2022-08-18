@@ -3,24 +3,26 @@
 int main()
 {
     
-    for(int i = 1; i <= 4; i++)
+    for(int i = 1; i <= 3; i++)
     {
         for(int j =1; j <=19; j++)
         {
-            if(j>=4-i && j<= 6+i)
-                printf("*");
-            else if(j>=13-i && j<= 16+i)
+            if(((j>=4-i) && (j<=6+i)) || ((j>=14-i) && (j<=16+i)))
                 printf("*");
             else
                 printf(" ");
         }
         printf("\n");
     }
-    for(int i = 1; i <=9; i++)
+    for(int i = 1; i <= 10; i++)
     {
         for(int j =1; j <=19; j++)
         {
-            if(j>=i+1 && j<= 19-i)
+            if((i==1) && (j==7))
+                printf("MySirG");
+            if(i == 1 && (j>=7) && (j<=12))
+                continue;
+            if(j>=i && j <=20-i)
                 printf("*");
             else
                 printf(" ");
