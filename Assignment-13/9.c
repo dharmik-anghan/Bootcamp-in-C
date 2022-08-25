@@ -1,23 +1,17 @@
 #include <stdio.h>
 
-void dtob(int);
+int count(int);
 int main()
 {
     int n;
     printf("VALUE: ");
     scanf("%d", &n);
 
-    dtob(n);
-
+    count(n);
     return 0;
 }
 
-void dtob(int n)
+int count(int n)
 {
-    if(n>0)
-    {
-        dtob(n/2);
-        printf("%d", n%2);
-    }
-            
+    count(n/10);   
 }
