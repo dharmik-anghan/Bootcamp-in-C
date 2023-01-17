@@ -1,27 +1,30 @@
 #include <iostream>
 using namespace std;
-void higestnumbber(int a);
+
+class Time
+{
+    private:
+        int hour, min, sec;
+    public:
+        void setTime(int h, int m, int s)
+        {
+            hour = h;
+            min = m;
+            sec = s;
+        }
+
+        void showTime()
+        {
+            cout<<hour<<"h "<<min<<"m "<<sec<<"s"<<endl;
+        }
+};
 
 int main()
 {
-    int a = 2394876;
-    higestnumbber(a);
+    Time t1;
+
+    t1.setTime(3,45,10);
+    t1.showTime();
 
     return 0;
-}
-
-void higestnumbber(int a)
-{
-    int max=0, x;
-    x = a;
-
-    while(a!= 0)
-    {
-        int modulo = a%10;
-        a = a/10;
-        if(modulo >= max)
-            max = modulo;
-    }
-
-    cout<<max<<endl;
 }
