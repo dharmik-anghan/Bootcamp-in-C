@@ -49,7 +49,7 @@ class Complex
         }
         void display()
         {
-            cout<<"Real = "<<real<<" Img = "<<img<<endl;
+            cout<<real<<" + "<<img<<"i"<<endl;
         }                                                                                                                                                                                    
 };
 
