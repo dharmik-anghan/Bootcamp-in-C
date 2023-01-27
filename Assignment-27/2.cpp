@@ -14,13 +14,13 @@ class Unary
         {
             x = a;
         }
-        void operator++()
+        Unary operator++()
         {
-            ++x;
+            return ++x;
         }
-        void operator++(int dummy)
+        Unary operator++(int dummy)
         {
-            x++;
+            return x++;
         }
         void operator--()
         {
@@ -36,15 +36,13 @@ class Unary
 
 int main()
 {
-    Unary a, b;
+    Unary a;
 
-    ++a;
-    a.display();
     
-    a++;
-
+    (++a).display();
+    (a++).display();
     a.display();
-    b.display();
+
 
     return 0;
 }
