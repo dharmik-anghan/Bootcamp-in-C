@@ -3,11 +3,6 @@ using namespace std;
 
 int plaindrome(int x)
 {
-    if(x<0)
-    {
-        return 0;
-    }
-
     int rev=0, rem = 0, temp = x;
 
 
@@ -26,7 +21,13 @@ int plaindrome(int x)
 
 int main()
 {
-    if(plaindrome(-121))
+    int x = -121
+    if(x<0)
+    {
+        cout<<"False";
+        return 0;
+    }
+    if(plaindrome(x))
     {
         cout<<"True";
     }
